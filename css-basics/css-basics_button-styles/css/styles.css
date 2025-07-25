@@ -8,6 +8,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
+
 }
 
 section {
@@ -32,18 +33,33 @@ Make sure not to put your code into the comments, because then nothing will happ
 
 .button1 {
   /* Style me! Change my border, set a border radius or try out other styles. :) */
+  border: 2px dashed black;
+  border-radius: 20px;
+  padding: 25px;
+  background-color: #4dcd98;
+  font-size: 30px;
 }
 
 .button2 {
   /* Style me! Change my color or background-color, or both! You can experiment with different color formats here, like HEX, RGB, etc. */
+  background-color: #8F508C;
+  color: white;
+  border: 50px solid gray;
+  border-radius: 20%;
 }
 
 .button3 {
   /* Style me! You can test out changing the font, font size, ...*/
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: xx-large;
+  font-family: "Bitcount Prop Single", system-ui;
 }
 
 .button4 {
   /* Style me! Can you add a shadow to this button? Try playing around with shadow properties - you can even change the shadow color, size, and more. */
+  box-shadow: 10px 5px 5px #9E919D;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 /* Feel free to play around with other properties, too. */
