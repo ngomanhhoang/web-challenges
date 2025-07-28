@@ -1,0 +1,7 @@
+.main-content__title {
+    background: var(--main-title-bg);
+}
+
+.main {
+    background: var(--main-bg);
+}
