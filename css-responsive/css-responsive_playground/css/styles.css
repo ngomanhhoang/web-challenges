@@ -59,10 +59,10 @@ h1 {
   margin: auto;
 }
 
+/* BOX 1 */
 .box--one {
   background-color: lightblue;
-
-  width: 100px;
+  width: 30%;
   height: 100px;
 }
 
@@ -93,4 +93,32 @@ h1 {
 
 .box--five img {
   width: 100%;
+}
+
+/* BOX 2*/
+
+@media (min-width: 599px) {
+  .box--two {
+    width: 200px;
+  }
+}
+@media (min-width: 1199px) {
+  .box--two {
+    width: 400px;
+  }
+}
+
+/* BOX 3 */
+@media (min-width: 700px) and (orientation: landscape) {
+  .box--three {
+    width: 100%;
+    height: 2%;
+  }
+}
+
+/* BOX 4 */
+@media (prefers-color-scheme: dark) {
+  .box--four {
+    background: #f3f5f9;
+  }
 }
