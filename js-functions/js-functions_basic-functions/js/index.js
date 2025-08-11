@@ -9,7 +9,12 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const data = {
+  title: "Atomic Habits",
+  author: "James Clear",
+  rating: 4.7,
+  copies: 1000000,
+};
 // --^-- write your code here --^--
 
 /*
@@ -27,7 +32,12 @@ Then:
 */
 
 // --v-- write your code here --v--
+logBookData();
 
+data.copies++
+data.rating = 5;
+
+logBookData();
 // --^-- write your code here --^--
 
 /*
@@ -40,5 +50,15 @@ Then:
 */
 
 // --v-- write your code here --v--
+function logBookData() {
+  console.log("Title: " + data.title);
+  console.log("Author: " + data.author);
+  console.log("Rating: " + data.rating);
+  console.log("Sales: " + data.copies);
+}
+data.copies++
+logBookData();
 
+data.copies++
+logBookData();
 // --^-- write your code here --^--
