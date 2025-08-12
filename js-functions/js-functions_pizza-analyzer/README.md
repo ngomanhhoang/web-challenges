@@ -37,7 +37,8 @@ Let's update the background of the output display to indicate whether we gain or
 2. Set the background color of the `outputSection`:
    - Use `"var(--red)"` if we loose pizza.
    - Use `"var(--green)"` if we gain pizza.
-3. Call this function in both event listeners with the correct sizes as arguments.
+3. 
+
 
 > 💡 `var(--<variable-name>)` allows you to use predefined CSS variables. In this case, the color codes are stored in the `--red` and `--green` variables in the `:root` element of the HTML document. Check the CSS file for details.
 
