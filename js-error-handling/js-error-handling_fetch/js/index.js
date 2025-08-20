@@ -10,6 +10,10 @@ async function fetchUserData(url) {
       headers: { "x-api-key": "reqres-free-v1" },
     });
 
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data! Status Code: ${response.status}`);
+    }
+
     return await response.json();
   } catch (error) {
     return { error: error.message };
