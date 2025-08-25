@@ -1,7 +1,10 @@
-export default function App(onClick) {
+export default function App() {
+  function handleClick() {
+    console.log("clicked");
+  }
   return (
     <Button
-      handleClick={onClick}
+      handleClick={handleClick}
       color={"white"}
       disabled={false}
       text={"Hello World"}
@@ -9,7 +12,8 @@ export default function App(onClick) {
   );
 }
 
-function Button({ color, disabled, text }) {
+function Button({ handleClick, color, disabled, text }) {
+  console.log("HandleClick", handleClick);
   return (
     <button
       onClick={handleClick}
@@ -26,8 +30,4 @@ function Button({ color, disabled, text }) {
       {text}
     </button>
   );
-
-  function handleClick() {
-    console.log("You clicked me!");
-  }
 }
