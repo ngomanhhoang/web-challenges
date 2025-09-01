@@ -3,7 +3,7 @@ import { D6Button } from "./components/D6Button";
 import History from "./components/History";
 import "./styles.css";
 import useLocalStorageState from "use-local-storage-state";
-import { getD6Roll } from "./utils"; 
+import { getD6Roll } from "./utils";
 
 export default function App() {
   const [rolls, setRolls] = useLocalStorageState("rolls", { defaultValue: [] });
