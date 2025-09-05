@@ -1,18 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { volumes } from "../../lib/data.js";
+import { useRouter } from "next/router";
 
 export default function VolumeDetail() {
-  const volumeIndex = volumes.findIndex(
-    (volume) => volume.slug === "the-two-towers"
-  );
+  const router = useRouter();
+  const { slug } = router.query;
+  const volumeIndex = volumes.findIndex((volume) => volume.slug === slug);
 
   const volume = volumes[volumeIndex];
   const nextVolume = volumes[volumeIndex + 1];
   const previousVolume = volumes[volumeIndex - 1];
 
   if (!volume) {
-    return null;
+    return <h1>Page not found !!</h1>;
   }
 
   const { title, description, cover, books } = volume;
