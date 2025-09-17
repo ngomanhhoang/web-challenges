@@ -1,7 +1,17 @@
+import useSWR from "swr";
+const fetcher = (url) => fetch(url).then((response) => response.json());
 export default function HomePage() {
+  const { data, error, isLoading } = useSWR("/api/products", fetcher);
+  if (error) return <div>Failed to load</div>;
+  if (isLoading) return <div>Loading...</div>;
   return (
-    <div>
-      <h1>Welcome to Next.js API Routes!</h1>
-    </div>
+    <ul>
+      {data.map((product) => (
+        <li key={product.id}>
+          {product.name} - {product.description} - {product.currency}
+          {product.price} - {product.category}
+        </li>
+      ))}
+    </ul>
   );
 }
