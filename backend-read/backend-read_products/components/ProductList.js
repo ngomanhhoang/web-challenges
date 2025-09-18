@@ -18,8 +18,17 @@ export default function ProductList() {
       <StyledHeading>Available Fishes</StyledHeading>
       <StyledList>
         {data.map((product) => (
-          <li key={product.id}>
-            <StyledLink href={`/${product.id}`}>{product.name}</StyledLink>
+          <li key={product._id}>
+            <StyledLink href={`/${product._id}`}>
+              {product.name}
+              {product.reviews?.map((review) => (
+                <div key={review._id}>
+                  <h4>{review.title}</h4>
+                  <p>{review.text}</p>
+                  <p>Rating: {review.rating}</p>
+                </div>
+              ))}
+            </StyledLink>
           </li>
         ))}
       </StyledList>
